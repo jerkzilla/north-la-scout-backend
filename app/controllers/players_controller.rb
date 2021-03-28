@@ -21,8 +21,10 @@ class PlayersController < ApplicationController
     end
 
     def destroy
+        # binding.pry
         @player = Player.find(params[:id]) 
         @player.destroy
+        render json:@player
     end
 
     private
